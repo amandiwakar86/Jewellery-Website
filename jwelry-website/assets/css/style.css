@@ -55,8 +55,10 @@ body {
 .newCollectionProducts{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+
 }
 .new-collection-section .new-collection-box {
     /* width: 250px;
