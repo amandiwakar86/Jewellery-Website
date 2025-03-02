@@ -260,7 +260,9 @@ include './jwelry-website/includes/header.php';
 
 
     <!-- New Collection -->
-    <section class="new-collection-section">
+<section class="new-collection-section">
+    <h2>New Collection</h2>
+        <div class="newCollectionProducts">
         <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
                 <img src="./jwelry-website/assets/images/newCollection1.jpg" alt="">
@@ -280,8 +282,9 @@ include './jwelry-website/includes/header.php';
             <a href="./jwelry-website/pages/checkout.php?product_id=1">
                 <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
             </a>
-        </div>
-    </section>
+        </div>  
+    </div>
+</section>
 
     <!-- Trending Products -->
     <section class="trending-section">
