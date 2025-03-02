@@ -37,7 +37,6 @@ function buyNow(index) {
 // Load products when page loads
 document.addEventListener("DOMContentLoaded", displayTrendingProducts);
 
-
 // Commond to add products
 // trendingProducts.push({
 //     name: "Silver Pendant",
@@ -45,6 +44,31 @@ document.addEventListener("DOMContentLoaded", displayTrendingProducts);
 //     image: "https://via.placeholder.com/200"
 // });
 
+//  For Deal Banner
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const slider = document.getElementById('slider');
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
 
 // FAQs section-----------------------------
 

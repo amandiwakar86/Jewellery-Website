@@ -9,182 +9,52 @@ body {
     text-align: center;
     position: relative;
 }
-/* Hero Section */
- /* hero section */
- .searchBar{
+
+/* For category section */
+.category-section {
     width: 100%;
-    height: 40px;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 50px;
-    padding:10px;
-}
-.searchBar:hover{
-    border:2px solid gray;
-}
-.searchBar i{
-    color:black;
-}
-
-
-.searchBar input{
-    width: 98%;
-    height: 35px;
-    outline:none;
-    border:none;
-    border-radius: 50px;
-    font-size:16px;
-}
-
-
-   /* For Floating Whatsapp button */
-   .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-.whatsapp-float img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Hero Section */
-.hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    /* Full height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-/* Background Video */
-#hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Overlay */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Dark overlay */
-}
-
-
-/* Hero Content */
-.hero-content {
-    width: 100%;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
     position: relative;
-    z-index: 2;
-    max-width: 90%;
-    gap:10px;
-}
+    top: 570px;
+  }
+  .swiper-wrapper {
+    display: flex;
+  }
+  .category-item {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    gap:20px;
+  }
+  .category-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    color: #000;
+  }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-/* Button */
-.btn {
-    display: inline-block;
-    background: #d4af37;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: 0.3s;
-    margin-top:10px;
-}
-
-.btn:hover {
-    background: #b8952a;
-}
-
-/* Video Control Button */
-#video-control {
-    width: 150px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-#video-control:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.new-collection-section {
-    margin-top: 510px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 1rem;
-    }
-}
 
 /* NEw Collection */
 .new-collection-section {
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.newCollectionProducts{
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -287,6 +157,10 @@ h2 {
     color: #555;
     margin: 5px 0;
 }
+.trending-section .product button{
+    padding: 10px 20px;
+}
+
 
 /* Buy Button */
 .buy-button {
@@ -314,6 +188,47 @@ h2 {
     }
 }
 
+
+/* For Deals Banners */
+.deals-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.slider {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    width: 100%;
+    flex: 0 0 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* Offer Banner Styles */
 

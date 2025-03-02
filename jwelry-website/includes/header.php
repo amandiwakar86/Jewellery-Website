@@ -40,7 +40,6 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         left: 0;
         z-index: 99;
         color: #fff;
-
     }
 
     marquee {
@@ -49,6 +48,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         padding: 5px;
         width: 100%;
         display: inline-block;
+        background-color: rgb(240, 64, 64);
     }
 
     .navbar {
@@ -99,13 +99,14 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         margin: 0;
         display: flex;
         flex-direction: column;
-        background-color:rgba(209, 204, 204, 0.35);
+        background-color:rgba(73, 71, 71, 0.54);
         width: 300px;
         height: 100vh;
         position: fixed;
         top: 0;
         right: -300px;
         transition: right 0.8s ease-in-out;
+        color:white;
     }
 
     .phone-menu .menu {
@@ -128,7 +129,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         position: absolute;
         top: 10px;
         left: 50px;
-        background-color: #eeeeee2e;
+        background-color:rgba(238, 238, 238, 0.97);
         box-shadow: 0px 0px 10px #007bff;
         text-align: start;
         padding: 10px;
@@ -193,7 +194,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         height: 300px;
         position: absolute;
         top: 100%;
-        background-color: #ffffff5e;
+        background-color:rgba(255, 255, 255, 0.86);
         /* box-shadow: 0px 0px 10px #007bff; */
         text-align: start;
         padding: 10px;

@@ -49,8 +49,8 @@
     }
 
 
-       /* For Floating Whatsapp button */
-       .whatsapp-float {
+    /* For Floating Whatsapp button */
+    .whatsapp-float {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -82,14 +82,14 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 635px;
         /* Full height */
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: white;
-        z-index: 1;
+        /* z-index: 1; */
     }
 
     /* Background Video */
@@ -229,37 +229,94 @@
     <?php
 include './jwelry-website/includes/header.php'; 
 ?>
-    <div class="whatsapp-logo">
-        <a href="https://wa.me/8630750297" target="_blank" class="whatsapp-float">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-    </div>
+<div class="whatsapp-logo">
+    <a href="https://wa.me/8630750297" target="_blank" class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</div>
 
-    <!-- Hero Sction -->
+<!-- Hero Sction -->
 
-    <section class="hero">
-        <video autoplay muted loop id="hero-video">
-            <source src="./jwelry-website/assets/videos/video1.mp4.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+<section class="hero">
+    <video autoplay muted loop id="hero-video">
+        <source src="./jwelry-website/assets/videos/video1.mp4.mp4" type="video/mp4">
+        <!-- Your browser does not support HTML5 video. -->
+    </video>
 
-        <div class="overlay"></div>
+    <div class="overlay"></div>
 
-        <div class="hero-content">
-            <h1>Discover Timeless Elegance</h1>
-            <p>Handcrafted Silver jewellery for Every Occasion</p>
-            <div class="searchBar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="search-box" placeholder="Search for products..." onkeypress="handleSearch(event)">
-            </div>
-            <a href="./jwelry-website/pages/all-products.php" class="btn">Shop Now</a>
+    <div class="hero-content">
+        <h1>Discover Timeless Elegance</h1>
+        <p>Handcrafted Silver jewellery for Every Occasion</p>
+        <div class="searchBar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-box" placeholder="Search for products..." onkeypress="handleSearch(event)">
         </div>
+        <a href="./jwelry-website/pages/all-products.php" class="btn">Shop Now</a>
+    </div>
+    <button id="video-control" onclick="toggleVideo()">Pause</button>
+</section>
 
-        <button id="video-control" onclick="toggleVideo()">Pause</button>
-    </section>
 
-
-    <!-- New Collection -->
+    <!-- Category Section -->
+<!-- Category Slider Section -->
+<section class="category-section swiper">
+  <div class="swiper-wrapper">
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/ring.jpg" alt="Rings" />
+      </div>
+      <h3>Rings</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/anklit.jpg" alt="Jewellery" />
+      </div>
+      <h3>Anklits</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/baby.jpg" alt="Jewellery" />
+      </div>
+      <h3>baby</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/chains.jpg" alt="Jewellery" />
+      </div>
+      <h3>Chains</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/earring.jpg" alt="Jewellery" />
+      </div>
+      <h3>Earrings</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/lady-bracelets.jpg" alt="Jewellery" />
+      </div>
+      <h3>Lady Bracelets</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/necklaces.jpg" alt="Jewellery" />
+      </div>
+      <h3>Necklaces</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+      </div>
+      <h3>Toe Rings</h3>
+    </div>
+  </div>
+  
+  <!-- Navigation Buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</section>
+<!-- New Collection -->
 <section class="new-collection-section">
     <h2>New Collection</h2>
         <div class="newCollectionProducts">
@@ -284,32 +341,45 @@ include './jwelry-website/includes/header.php';
             </a>
         </div>  
     </div>
-</section>
+</section> 
 
     <!-- Trending Products -->
-    <section class="trending-section">
-        <h2>Trending Products</h2 data-aos="zoom-in-down">
-        <div class="products-container" id="products-container" data-aos="zoom-in-up">
-            <!-- Products will be added dynamically here -->
-        </div>
-    </section>
+<section class="trending-section">
+    <h2>Trending Products</h2 data-aos="zoom-in-down">
+    <div class="products-container" id="products-container" data-aos="zoom-in-up">
+         <!-- Products will be added dynamically here -->
+    </div>
+</section> 
 
-    <!-- Offer banner section -->
-    <section class="offer-banner-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <div id="offer-banner" class="offer-banner" onclick="buyOfferProduct()">
-            <img id="offer-image" src="" alt="Special Offer">
-            <div class="offer-details">
-                <h2 id="offer-name"></h2>
-                <p id="offer-price"></p>
-                <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                    <p class="offer-text">Limited Time Offer! Click to Buy Now</p>
-                </a>
+<!-- Deals Section -->
+<section class="deals-section">
+        <h2>Exclusive Deals</h2>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal1.jpg');"></div>
+                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal2.jpg');"></div>
+                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal3.jpg');"></div>
             </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-    </section>
+</section>
+    <!-- Offer banner section -->
+<section class="offer-banner-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div id="offer-banner" class="offer-banner" onclick="buyOfferProduct()">
+        <img id="offer-image" src="" alt="Special Offer">
+            <div class="offer-details">
+            <h2 id="offer-name"></h2>
+            <p id="offer-price"></p>
+            <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                <p class="offer-text">Limited Time Offer! Click to Buy Now</p>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Our costomer section -->
-    <section class="our-customers">
+<section class="our-customers">
         <div class="container mx-auto px-6">
             <h2>Our Happy Customers</h2>
             <p>Join our satisfied customers who trust us for their silver jewelry needs.</p>
@@ -337,12 +407,12 @@ include './jwelry-website/includes/header.php';
                     <p>"Best customer service and stunning designs. Highly recommended!"</p>
                     <h4>- Gautam Adani</h4>
                 </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section> 
 
     <!-- Store center section -->
-    <section id="our-store" class="store-section">
+<section id="our-store" class="store-section">
         <h2>Our Store</h2>
         <p>Welcome to our premium silver jewelry store! Explore our collection of exquisite designs crafted with
             perfection.</p>
@@ -361,10 +431,10 @@ include './jwelry-website/includes/header.php';
                 referrerpolicy="no-referrer-when-downgrade" width="100%" height="200" style="border:0;"
                 allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
+</section> 
 
     <!-- FAQs section -->
-    <div class="faq-container">
+<div class="faq-container">
         <h2>Frequently Asked Questions (FAQs)</h2>
         <div class="faq-item" data-aos="zoom-in-down">
             <p class="faq-question">1. What type of silver jewelry do you offer? <span class="faq-toggle">&#9662;</span>
@@ -396,12 +466,11 @@ include './jwelry-website/includes/header.php';
             <p class="faq-answer">You can refer to our size guide available on the product page or visit a local jeweler
                 for precise measurements. If you need further assistance, feel free to contact us.</p>
         </div>
-    </div>
+</div>
 
     <?php
 include './jwelry-website/includes/footer.php';
 ?>
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./jwelry-website/assets/js/script.js"></script>
@@ -426,5 +495,33 @@ include './jwelry-website/includes/footer.php';
     }
 
 </script>
+<!-- Add SwiperJS CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- For category slider -->
+<script>
+  var swiper = new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>
 </html>
