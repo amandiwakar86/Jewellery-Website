@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: rgb(102, 18, 199); */
+    color: rgb(95 67 67);
+    font-weight: bold;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px rgb(85, 85, 87);
+    background-color: #fdfafa;
+    z-index: 99;
+}
+
+marquee {
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #fff;
+    background: #534947;
+    padding: 5px;
+    width: 100%;
+    display: inline-block;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+.login_btn {
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background-color: rgb(31, 31, 117);
+    color: #fff;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.hamburger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 999;
+    /* position: absolute;
+    top: 30px;
+    right: 20px; */
+}
+
+.hamburger span {
+    display: none;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(5, 5, 5);
+}
+
+/* Style menu bar for tablates */
+#menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #d1ccccdc;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: right 0.8s ease-in-out;
+}
+
+.phone-menu .menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding-top: 50PX;
+}
+
+.phone-menu .menu .menu-item {
+    font-size: 25px;
+}
+
+.phone-menu .dropDownMenu {
+    display: none;
+    height: 300px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #007bff;
+    text-align: start;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 9999;
+}
+
+.phone-menu .DropDownMenu1 {
+    width: 150px;
+    height: 170px;
+}
+
+.phone-menu .DropDownMenu2 {
+    width: 200px;
+    height: 170px;
+}
+
+.phone-menu .DropDownMenu3 {
+    width: 200px;
+    height: 140px;
+}
+
+.phone-menu .DropDownMenu4 {
+    width: 230px;
+    height: 140px;
+}
+
+
+/* style menu for big devices */
+.nav-links .menu {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 35px; */
+    justify-content: space-around;
+    padding: 5px;
+    gap: 5px;
+}
+
+.menu-item a {
+    gap: 5;
+    font-size: 20px;
+    color: rgb(10 10 10);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover .fa-regular {
+    transform: rotate(90deg);
+}
+
+.menu-item {
+    padding: 10px;
+    position: relative;
+}
+
+.dropdown:hover .dropDownMenu {
+    display: block;
+}
+
+.dropDownMenu {
+    display: none;
+    height: 300px;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #007bff;
+    text-align: start;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.DropDownMenu1 {
+    width: 150px;
+    height: 170px;
+}
+
+.DropDownMenu2 {
+    width: 210px;
+    height: 170px;
+}
+
+.DropDownMenu3 {
+    width: 200px;
+    height: 140px;
+}
+
+.DropDownMenu4 {
+    width: 260px;
+    height: 140px;
+}
+
+.dropDownMenu li {
+    padding: 10px;
+}
+
+.dropDownMenu li a {
+    font-size: 16px;
+    z-index: 20;
+}
+
+
+.dropDownMenu li:hover {
+    background-color: #f8f1f1;
+}
+
+.search-Container {
+    min-width: 300px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+/* Search Box Styling */
+#search-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* .search-Container input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+} */
+
+.search-Container {
+    border: 1px solid black;
+    border-radius: 50px;
+
+}
+
+.search-Container:hover {
+    border: 2px solid black;
+}
+
+.nav-icons {
+    max-width: 200px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px 30px;
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 479px) {
+    marquee {
+        font-size: 12px;
+    }
+
+    .header {
+        width: 100%;
+        height: 75px;
+    }
+
+    /* .navbar {
+        padding: 2px;
+    } */
+
+    .navbar {
+        height: 40px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+
+    .phone-menu .menu {
+        width: 100%;
+    }
+
+    .search-Container {
+        height: 20px;
+        min-width: 100px;
+    }
+
+    /* .search-Container input {
+        width: 100%;
+        height: 16px;
+        font-size: 14px;
+    }
+
+    .searcher-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+    } */
+
+
+    .login_btn {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    #search-box {
+        margin: 5px auto;
+    }
+
+    .nav-icons {
+        font-size: 18px;
+        width: 160px;
+        gap: 6px;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    .hamburger {
+        height: 30px;
+        width: 30px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    marquee {
+        font-size: 12px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .phone-menu {
+        display: block;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .searcher-icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+    }
+
+    .menu-item a {
+        font-size: 20px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .nav-links .menu {
+        display: none;
+    }
+
+    #search-box {
+        margin: 10px auto;
+    }
+
+    .menu-item a {
+        font-size: 13px;
+    }
+
+    .icon-box a {
+        font-size: 13px;
+    }
+
+
+    .loginBtn button {
+        padding: 5px 3px;
+        font-size: 13px;
+    }
+
+    .search-box {
+        padding: 5px;
+    }
+}

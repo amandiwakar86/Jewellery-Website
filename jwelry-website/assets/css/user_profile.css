@@ -1,0 +1,80 @@
+
+/* User Profile Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../../assets/images/user_progile_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profile Container */
+.user_profile {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.user_profile h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* User Info */
+.user_profile p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Links */
+.user_profile a {
+    display: inline-block;
+    text-decoration: none;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.user_profile a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
