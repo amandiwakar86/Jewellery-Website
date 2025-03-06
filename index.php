@@ -223,7 +223,43 @@
             font-size: 1rem;
         }
     }
+
+
+    /* Team */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.team-member {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: gray;
+}
+
 </style>
+
 
 <body>
     <?php
@@ -368,18 +404,18 @@ include './jwelry-website/includes/header.php';
 </section> 
 
 <!-- Deals Section -->
-<section class="deals-section">
+<!-- <section class="deals-section">
         <h2>Exclusive Deals</h2>
         <div class="slider-container">
             <div class="slider" id="slider">
-                <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal1.jpg');"></div>
+                <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal1.jpg');" object-fit:contain;></div>
                 <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal2.jpg');"></div>
                 <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal3.jpg');"></div>
             </div>
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-</section>
+</section> -->
     <!-- Offer banner section -->
 <section class="offer-banner-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div id="offer-banner" class="offer-banner" onclick="buyOfferProduct()">
@@ -449,6 +485,10 @@ include './jwelry-website/includes/header.php';
         </div>
 </section> 
 
+<section>
+<h1>Meet the Team</h1>
+<div class="team-container" id="team" data-aos="flip-left"></div>
+</section>
     <!-- FAQs section -->
 <div class="faq-container">
         <h2>Frequently Asked Questions (FAQs)</h2>
@@ -540,5 +580,28 @@ include './jwelry-website/includes/footer.php';
       },
     },
   });
+
+
+  <!-- For team -->
+const teamMembers = [
+    { name: "Rohit Baghel", role: "CEO", image: "./jwelry-website/assets/images/team1.jpg" },
+    { name: "Rohit Baghel", role: "CTO", image: "./jwelry-website/assets/images/team1.jpg" },
+    { name: "Rohit Baghel", role: "Designer", image: "./jwelry-website/assets/images/team1.jpg" }
+];
+
+const teamContainer = document.getElementById("team");
+
+teamMembers.forEach(member => {
+    const memberDiv = document.createElement("div");
+    memberDiv.classList.add("team-member");
+    memberDiv.innerHTML = `
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+    `;
+    teamContainer.appendChild(memberDiv);
+});
 </script>
+
+
 </html>

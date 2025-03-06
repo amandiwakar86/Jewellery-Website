@@ -2,15 +2,15 @@
 include '../includes/config.php';
 
 // Fetch categories from database
-$conn = new mysqli("localhost", "root", "", "sinjhini_db");
-$result = $conn->query("SELECT category_id, category_name FROM categories");
+// $conn = new mysqli("localhost", "root", "", "sinjhini_db");
+// $result = $conn->query("SELECT category_id, category_name FROM categories");
 
-$categories = [];
-while ($row = $result->fetch_assoc()) {
-    $categories[] = $row;
-}
+// $categories = [];
+// while ($row = $result->fetch_assoc()) {
+//     $categories[] = $row;
+// }
 
-$conn->close();
+// $conn->close();
 ?>
 
 <!DOCTYPE html>

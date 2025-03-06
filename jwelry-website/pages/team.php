@@ -35,9 +35,9 @@ include '../includes/footer.php';
 </body>
 <script>
     const teamMembers = [
-        { name: "Mathur Ji", role: "CEO", image: "../assets/images/team2.jpg" },
+        { name: "Mathur Ji", role: "CEO", image: "../assets/images/team1.jpg" },
         { name: "Rohit Baghel", role: "CTO", image: "../assets/images/team1.jpg" },
-        { name: "Aman Diwakar", role: "Designer", image: "../assets/images/team2.jpg" }
+        { name: "Aman Diwakar", role: "Designer", image: "../assets/images/team1.jpg" }
     ];
 
     const teamContainer = document.getElementById("team");

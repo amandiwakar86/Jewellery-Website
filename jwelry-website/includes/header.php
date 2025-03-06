@@ -550,7 +550,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             <div class="nav-icons">
                 <a href="<?php echo $base_url; ?>dashboard/userDashboard.php"> <i class="fa-solid fa-user"></i></a>
                 <a href="<?php echo $base_url; ?>pages/cart.php"> <i class="fa-solid fa-cart-shopping"></i></a>
-                <!-- <a href="./jwelry-website/pages/login.php" class="login_btn">Login</a> -->
+                <a href="<?php echo $base_url; ?>userAuthentication/login.php" class="login_btn">Login</a>
                 <div class="hamburger" id="menu-toggle">
                     <span></span><span></span><span></span>
                 </div>

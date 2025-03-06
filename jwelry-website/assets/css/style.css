@@ -24,13 +24,14 @@ body {
   .swiper-wrapper {
     display: flex;
   }
+
   .category-item {
     width: 120px;
     height: 120px;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
-    gap:20px;
+    gap:10px;
   }
   .category-img img {
     width: 100px;
@@ -523,3 +524,4 @@ h2 {
 .expanded .faq-toggle {
     transform: rotate(180deg);
 }
+
