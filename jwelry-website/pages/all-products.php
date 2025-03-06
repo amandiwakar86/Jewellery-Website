@@ -3,7 +3,7 @@ include '../includes/config.php'; // Include your database connection file
 
 $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 $sql = "SELECT * FROM products";
-$result = $conn->query($sql);
+// $result = $conn->query($sql);
 
 // Dynamically get the base URL
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";

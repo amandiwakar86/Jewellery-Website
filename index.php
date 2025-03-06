@@ -264,49 +264,64 @@ include './jwelry-website/includes/header.php';
   <div class="swiper-wrapper">
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/ring.jpg" alt="Rings" />
+        <a href="./jwelry-website/pages/rings.php"><img src="./jwelry-website/assets/category images/ring.jpg" alt="Rings" />
+        </a>
       </div>
       <h3>Rings</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/anklit.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/anklit.php"><img src="./jwelry-website/assets/category images/anklit.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Anklits</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/baby.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/baby.php"><img src="./jwelry-website/assets/category images/baby.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>baby</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/chains.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/chains.php"><img src="./jwelry-website/assets/category images/chains.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Chains</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/earring.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/earrings.php"><img src="./jwelry-website/assets/category images/earring.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Earrings</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/lady-bracelets.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/ladyBraclets.php"><img src="./jwelry-website/assets/category images/lady-bracelets.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Lady Bracelets</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/necklaces.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/neckllaces.php">        <img src="./jwelry-website/assets/category images/necklaces.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Necklaces</h3>
     </div>
     <div class="category-item swiper-slide">
       <div class="category-img">
-        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+        <a href="./jwelry-website/pages/toe-rings.php">        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+        </a>
+      </div>
+      <h3>Toe Rings</h3>
+    </div>
+    <div class="category-item swiper-slide">
+      <div class="category-img">
+        <a href="./jwelry-website/pages/gift-ideas.php">        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+        </a>
       </div>
       <h3>Toe Rings</h3>
     </div>
@@ -316,6 +331,7 @@ include './jwelry-website/includes/header.php';
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
 </section>
+
 <!-- New Collection -->
 <section class="new-collection-section">
     <h2>New Collection</h2>
@@ -356,9 +372,9 @@ include './jwelry-website/includes/header.php';
         <h2>Exclusive Deals</h2>
         <div class="slider-container">
             <div class="slider" id="slider">
-                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal1.jpg');"></div>
-                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal2.jpg');"></div>
-                <div class="slide" style="background-image: url('/jwelry-website/assets/images/deal3.jpg');"></div>
+                <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal1.jpg');"></div>
+                <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal2.jpg');"></div>
+                <div class="slide" style="background-image: url('./jwelry-website/assets/images/deal3.jpg');"></div>
             </div>
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <button class="next" onclick="nextSlide()">&#10095;</button>
@@ -474,6 +490,7 @@ include './jwelry-website/includes/footer.php';
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./jwelry-website/assets/js/script.js"></script>
+<script src="./jwelry-website/assets/js/header.js"></script>
 <!-- For scroll animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

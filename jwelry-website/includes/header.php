@@ -119,9 +119,9 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         padding-top: 50PX;
     }
 
-    .phone-menu .menu .menu-item {
+    /* .phone-menu .menu .menu-item {
         font-size: 25px;
-    }
+    } */
 
     .phone-menu .dropDownMenu {
         display: none;
@@ -129,17 +129,21 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         position: absolute;
         top: 10px;
         left: 50px;
-        background-color:rgba(238, 238, 238, 0.97);
-        box-shadow: 0px 0px 10px #007bff;
+        background-color:rgba(134, 125, 125, 0.97);
+        box-shadow: 0px 0px 10pxrgb(59, 60, 61);
         text-align: start;
         padding: 10px;
         border-radius: 4px;
         z-index: 9999;
     }
+    .phone-menu  .derop-menu-tag{
+        font-size: 20px;
+    }
+    
 
     .phone-menu .DropDownMenu1 {
         width: 150px;
-        height: 170px;
+        height: 370px;
     }
 
     .phone-menu .DropDownMenu2 {
@@ -296,13 +300,6 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             gap: 6px;
         }
 
-        .menu-item a {
-            font-size: 13px;
-        }
-
-        .icon-box a {
-            font-size: 13px;
-        }
 
         .loginBtn button {
             padding: 5px 3px;
@@ -395,13 +392,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             display: none;
         }
 
-        .menu-item a {
-            font-size: 13px;
-        }
-
-        .icon-box a {
-            font-size: 13px;
-        }
+       
 
         .loginBtn button {
             padding: 5px 3px;
@@ -411,13 +402,14 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         .search-box {
             padding: 5px;
         }
-    }
+
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
 
     .menu-item a {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .icon-box a {
@@ -440,14 +432,6 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
 
         #search-box {
             margin: 10px auto;
-        }
-
-        .menu-item a {
-            font-size: 13px;
-        }
-
-        .icon-box a {
-            font-size: 13px;
         }
 
 
@@ -473,7 +457,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
             <!-- <div class="logo"><img src="./jwelry-website/assets/images/logo.jpg" alt="Logo"></div> -->
             <div class="phone-menu" id="menu">
                 <ul class="menu">
-                    <li class="menu-item dropdown"><a href="#">Shop</a>
+                    <li class="menu-item dropdown"><a class="derop-menu-tag" href="#">Shop</a>
                         <ul class="DropDownMenu1 dropDownMenu">
                             <ul>
                                 <li><a href="<?php echo $base_url; ?>pages/all-products.php">All Jewellery</a></li>
@@ -489,7 +473,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
 
                         </ul>
                     </li>
-                    <li class="menu-item dropdown"><a href="#">Collections</a>
+                    <li class="menu-item dropdown"><a class="derop-menu-tag"  href="#">Collections</a>
                         <ul class="DropDownMenu2 dropDownMenu">
                             <li><a href="<?php echo $base_url; ?>pages/new-arrivals.php">New Arrivals</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/best_sallers.php">Best Sallers</a></li>
@@ -498,14 +482,14 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item dropdown"><a href="#">About Us</a>
+                    <li class="menu-item dropdown"><a class="derop-menu-tag" href="#">About Us</a>
                         <ul class="DropDownMenu3 dropDownMenu">
                             <li><a href="<?php echo $base_url; ?>pages/our_story.php">Our Story</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/our_story.php">Mission & Values</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/team.php">Meat the Team</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item dropdown"><a href="#">Customer Care</a>
+                    <li class="menu-item dropdown"><a class="derop-menu-tag" href="#">Customer Care</a>
                         <ul class="DropDownMenu4 dropDownMenu">
                             <li><a href="<?php echo $base_url; ?>pages/contact.php">Contact Us</a></li>
                             <li><a href="<?php echo $base_url; ?>pages/faqs.php">FAQs</a></li>
@@ -514,7 +498,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item dropdown"><a href="<?php echo $base_url; ?>pages/blogs.php">Blogs</a></li>
+                    <li class="menu-item dropdown"><a class="derop-menu-tag" href="<?php echo $base_url; ?>pages/blogs.php">Blogs</a></li>
                 </ul>
             </div>
             <div class="nav-links">

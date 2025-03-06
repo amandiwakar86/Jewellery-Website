@@ -33,7 +33,6 @@ include '../includes/header.php';
 ?>
 <div class="dashboard">
         <nav class="sidebar">
-            <h2>Silver Shop</h2>
             <ul>
                 <li><a href="./user-profile.php">Profile</a></li>
                 <li><a href="./user_orders.php">Orders</a></li>
