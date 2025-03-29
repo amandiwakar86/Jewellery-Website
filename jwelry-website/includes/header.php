@@ -198,7 +198,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         height: 300px;
         position: absolute;
         top: 100%;
-        background-color:rgba(255, 255, 255, 0.86);
+        background-color:rgba(56, 54, 54, 0.86);
         /* box-shadow: 0px 0px 10px #007bff; */
         text-align: start;
         padding: 10px;
