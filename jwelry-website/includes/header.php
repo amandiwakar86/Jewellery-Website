@@ -66,6 +66,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         padding: 3px 6px;
         border-radius: 4px;
         color: #fff;
+        background-color:rgba(134, 125, 125, 0.97);
     }
 
     .logo {

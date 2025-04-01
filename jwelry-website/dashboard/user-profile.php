@@ -1,11 +1,11 @@
 <?php
-// session_start(); // Start session
+session_start(); // Start session
 
 // Check if user is logged in
-// if (!isset($_SESSION['user_id'])) {
-    // header("Location: ../login.php"); // Redirect to login if not logged in
-    // exit();
-// }
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login.php"); // Redirect to login if not logged in
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -110,9 +110,9 @@
     <div class="user_profile">
         <h1>User Profile</h1>
         <div class="user_datails">
-            <p><strong>Name:</strong> <?php echo htmlspecialchars($_SESSION['user_name']); ?></p>
-            <p><strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
-            <p><strong>Phone:</strong> <?php echo htmlspecialchars($_SESSION['user_phone']); ?></p>
+            <p><strong>Name:</strong> <?php echo htmlspecialchars($_SESSION['name']); ?></p>
+            <p><strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['email']); ?></p>
+            <p><strong>Phone:</strong> <?php echo htmlspecialchars($_SESSION['phone']); ?></p>
         </div>
         <a href="../../../index.php">Back to Main Page</a> |
     </div>
