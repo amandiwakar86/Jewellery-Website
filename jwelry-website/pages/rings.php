@@ -20,12 +20,11 @@ $result = $conn->query("
     <title>Rings Collection</title>
     <style>
         .container {
-            max-width: 1000px;
+            max-width: 1250px;
             margin: auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h2 {
             text-align: center;
@@ -85,8 +84,8 @@ include '../includes/header.php';
                 <h3><?= $row['name']; ?></h3>
                 <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
                 <p>Stock: <?= $row['stock_quantity']; ?> left</p>
-                <a href="productDetail.php?id=<?= $row['product_id']; ?>" class="btn">View Details</a>
-            </div>
+                <a href="checkout.php?product_id=<?= $row['product_id']; ?>" class="btn">View Details</a>
+                </div>
         <?php endwhile; ?>
     </div>
 </div>
