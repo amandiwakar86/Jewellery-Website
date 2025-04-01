@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = md5($_POST['password']); // Encrypt password
 
     // Check admin credentials
-    $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM admins WHERE username='$username' AND password='$password'";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
-        $_SESSION['admin'] = $username;
+        $_SESSION['admins'] = $username;
         header("Location: admin_pannel.php");
         exit();
     } else {
