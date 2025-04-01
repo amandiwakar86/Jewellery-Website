@@ -1,15 +1,25 @@
 <?php
-include '../includes/config.php';
+include '../includes/config.php'; // Ensure config.php contains the database connection
 
+// Database connection (Remove if config.php already connects)
 $conn = new mysqli("localhost", "root", "", "sinjhini_db");
 
-// Fetch all products that belong to the "Baby Jewelry" category
-$result = $conn->query("
-    SELECT products.*, categories.category_name 
-    FROM products 
-    JOIN categories ON products.category_id = categories.category_id 
-    WHERE categories.category_name = 'Baby Jewelry'
-");
+// Check connection error
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch all earrings
+$sql = "SELECT products.*, categories.category_name 
+        FROM products 
+        JOIN categories ON products.category_id = categories.category_id 
+        WHERE LOWER(categories.category_name) = 'Baby'"; // Case-insensitive search
+$result = $conn->query($sql);
+
+// Dynamically get the base URL
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$baseUrl = $protocol . $host . "/jweleryWebsite/jwelry-website/admin/";
 ?>
 
 <!DOCTYPE html>
@@ -17,15 +27,14 @@ $result = $conn->query("
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Jewelry Collection</title>
+    <title>Earrings Collection</title>
     <style>
         .container {
-            max-width: 1000px;
+            max-width: 1300px;
             margin: auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h2 {
             text-align: center;
@@ -72,25 +81,31 @@ $result = $conn->query("
     </style>
 </head>
 <body>
-<?php
-include '../includes/header.php';
-?>
+<?php include '../includes/header.php'; ?>
+<section class="Anklet-display">
+
+</section>
 <div class="container">
-    <h2>Baby Jewelry Collection</h2>
+    <h2>Baby Collection</h2>
     <div class="grid">
-        <?php while ($row = $result->fetch_assoc()): ?>
-            <div class="product-card">
-                <img src="<?= str_replace('./', '/jwelery-website/admin/', $row['image_url']); ?>" alt="Baby Jewelry">
-                <h3><?= $row['name']; ?></h3>
-                <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
-                <p>Stock: <?= $row['stock_quantity']; ?> left</p>
-                <a href="productDetail.php?id=<?= $row['product_id']; ?>" class="btn">View Details</a>
-            </div>
-        <?php endwhile; ?>
+        <?php if ($result && $result->num_rows > 0): ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
+                <div class="product-card">
+                    <img src="<?= $baseUrl . 'uploads/' . basename($row['image_url']); ?>" 
+                         onerror="this.onerror=null; this.src='<?= $baseUrl . 'uploads/default.jpg'; ?>';"
+                         alt="Earring Image">
+                    <h3><?= htmlspecialchars($row['name']); ?></h3>
+                    <p>Price: ₹<?= number_format($row['price'], 2); ?></p>
+                    <p>Stock: <?= (int)$row['stock_quantity']; ?> left</p>
+                    <a href="checkout.php?product_id=<?= $row['product_id']; ?>" class="btn">View Details</a>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p style="text-align: center; color: red;">No earrings available.</p>
+        <?php endif; ?>
     </div>
 </div>
-<?php
-include '../includes/footer.php';
-?>
+
+<?php include '../includes/footer.php'; ?>
 </body>
 </html>

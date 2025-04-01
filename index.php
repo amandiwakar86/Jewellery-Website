@@ -20,31 +20,33 @@
 </head>
 <style>
     /* hero section */
-    .searchBar{
+    .searchBar {
         width: 100%;
         height: 40px;
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         background-color: white;
         border-radius: 50px;
-        padding:10px;
+        padding: 10px;
     }
-    .searchBar:hover{
-        border:2px solid gray;
+
+    .searchBar:hover {
+        border: 2px solid gray;
     }
-    .searchBar i{
-        color:black;
+
+    .searchBar i {
+        color: black;
     }
 
 
-    .searchBar input{
+    .searchBar input {
         width: 98%;
         height: 35px;
-        outline:none;
-        border:none;
+        outline: none;
+        border: none;
         border-radius: 50px;
-        font-size:16px;
+        font-size: 16px;
     }
 
 
@@ -111,7 +113,7 @@
         background: rgba(0, 0, 0, 0.5);
         /* Dark overlay */
     }
-    
+
 
     /* Hero Content */
     .hero-content {
@@ -119,7 +121,7 @@
         position: relative;
         z-index: 2;
         max-width: 90%;
-        gap:10px;
+        gap: 10px;
     }
 
     .hero-content h1 {
@@ -142,7 +144,7 @@
         font-size: 1.2rem;
         border-radius: 5px;
         transition: 0.3s;
-        margin-top:10px;
+        margin-top: 10px;
     }
 
     .btn:hover {
@@ -172,6 +174,7 @@
     .new-collection-section {
         margin-top: 550px;
     }
+
     @media (max-width: 320px) {
         .hero-content h1 {
             font-size: 2rem;
@@ -180,29 +183,30 @@
         .hero-content p {
             font-size: 1rem;
         }
+
         .new-collection-section {
-        margin-top: 570px;
+            margin-top: 570px;
         }
 
         .btn {
             font-size: 1rem;
         }
 
-           /* Hero Section */
-    .hero {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        /* Full height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        z-index: 1;
-    }
+        /* Hero Section */
+        .hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            /* Full height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
     }
 
     /* Responsive Design */
@@ -214,8 +218,9 @@
         .hero-content p {
             font-size: 1rem;
         }
+
         .new-collection-section {
-        margin-top: 500px;
+            margin-top: 500px;
         }
 
         .btn {
@@ -226,37 +231,36 @@
 
     /* Team */
 
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-}
+    .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+    }
 
-.team-member {
-    background: white;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 350px;
-}
+    .team-member {
+        background: white;
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+    }
 
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
-.team-member h3 {
-    margin: 10px 0 5px;
-}
+    .team-member h3 {
+        margin: 10px 0 5px;
+    }
 
-.team-member p {
-    color: gray;
-}
-
+    .team-member p {
+        color: gray;
+    }
 </style>
 
 
@@ -264,146 +268,154 @@
     <?php
 include './jwelry-website/includes/header.php'; 
 ?>
-<div class="whatsapp-logo">
-    <a href="https://wa.me/8630750297" target="_blank" class="whatsapp-float">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-</div>
-
-<!-- Hero Sction -->
-
-<section class="hero">
-    <video autoplay muted loop id="hero-video">
-        <source src="./jwelry-website/assets/videos/video1.mp4.mp4" type="video/mp4">
-        <!-- Your browser does not support HTML5 video. -->
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Discover Timeless Elegance</h1>
-        <p>Handcrafted Silver jewellery for Every Occasion</p>
-        <div class="searchBar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="search-box" placeholder="Search for products..." onkeypress="handleSearch(event)">
-        </div>
-        <a href="./jwelry-website/pages/all-products.php" class="btn">Shop Now</a>
+    <div class="whatsapp-logo">
+        <a href="https://wa.me/8630750297" target="_blank" class="whatsapp-float">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
     </div>
-    <button id="video-control" onclick="toggleVideo()">Pause</button>
-</section>
 
+    <!-- Hero Sction -->
 
+    <section class="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="./jwelry-website/assets/videos/video1.mp4.mp4" type="video/mp4">
+            <!-- Your browser does not support HTML5 video. -->
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Discover Timeless Elegance</h1>
+            <p>Handcrafted Silver jewellery for Every Occasion</p>
+            <div class="searchBar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-box" placeholder="Search for products..."
+                    onkeypress="handleSearch(event)">
+            </div>
+            <a href="./jwelry-website/pages/all-products.php" class="btn">Shop Now</a>
+        </div>
+        <button id="video-control" onclick="toggleVideo()">Pause</button>
+    </section>
     <!-- Category Section -->
-<!-- Category Slider Section -->
-<section class="category-section swiper">
-  <div class="swiper-wrapper">
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/rings.php"><img src="./jwelry-website/assets/category images/ring.jpg" alt="Rings" />
-        </a>
-      </div>
-      <h3>Rings</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/anklit.php"><img src="./jwelry-website/assets/category images/anklit.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Anklits</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/baby.php"><img src="./jwelry-website/assets/category images/baby.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>baby</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/chains.php"><img src="./jwelry-website/assets/category images/chains.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Chains</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/earrings.php"><img src="./jwelry-website/assets/category images/earring.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Earrings</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/ladyBraclets.php"><img src="./jwelry-website/assets/category images/lady-bracelets.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Lady Bracelets</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/neckllaces.php">        <img src="./jwelry-website/assets/category images/necklaces.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Necklaces</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/toe-rings.php">        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Toe Rings</h3>
-    </div>
-    <div class="category-item swiper-slide">
-      <div class="category-img">
-        <a href="./jwelry-website/pages/gift-ideas.php">        <img src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
-        </a>
-      </div>
-      <h3>Toe Rings</h3>
-    </div>
-  </div>
-  
-  <!-- Navigation Buttons -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</section>
+    <!-- Category Slider Section -->
+    <section class="category-section swiper">
+        <div class="swiper-wrapper">
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/rings.php"><img
+                            src="./jwelry-website/assets/category images/ring.jpg" alt="Rings" />
+                    </a>
+                </div>
+                <h3>Rings</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/anklit.php"><img
+                            src="./jwelry-website/assets/category images/anklit.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Anklits</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/baby.php"><img
+                            src="./jwelry-website/assets/category images/baby.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>baby</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/chains.php"><img
+                            src="./jwelry-website/assets/category images/chains.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Chains</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/earrings.php"><img
+                            src="./jwelry-website/assets/category images/earring.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Earrings</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/ladyBraclets.php"><img
+                            src="./jwelry-website/assets/category images/lady-bracelets.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Lady Bracelets</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/neckllaces.php"><img
+                            src="./jwelry-website/assets/category images/necklaces.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Necklaces</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/toe-rings.php"><img
+                            src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Toe Rings</h3>
+            </div>
+            <div class="category-item swiper-slide">
+                <div class="category-img">
+                    <a href="./jwelry-website/pages/gift-ideas.php"><img
+                            src="./jwelry-website/assets/category images/toeRing.jpg" alt="Jewellery" />
+                    </a>
+                </div>
+                <h3>Toe Rings</h3>
+            </div>
+        </div>
 
-<!-- New Collection -->
-<section class="new-collection-section">
-    <h2>New Collection</h2>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section>
+
+    <!-- New Collection -->
+    <section class="new-collection-section">
+        <h2>New Collection</h2>
         <div class="newCollectionProducts">
-        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
-            <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                <img src="./jwelry-website/assets/images/newCollection1.jpg" alt="">
-            </a>
+            <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
+                <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                    <img src="./jwelry-website/assets/images/newCollection1.jpg" alt="">
+                </a>
+            </div>
+            <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
+                <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                    <img src="./jwelry-website/assets/images/newCollection2.jpg" alt="">
+                </a>
+            </div>
+            <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
+                <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                    <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
+                </a>
+            </div>
+            <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
+                <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                    <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
+                </a>
+            </div>
         </div>
-        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
-            <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                <img src="./jwelry-website/assets/images/newCollection2.jpg" alt="">
-            </a>
-        </div>
-        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
-            <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
-            </a>
-        </div>
-        <div class="new-collection-box" data-aos="fade-up" data-aos-duration="3000">
-            <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                <img src="./jwelry-website/assets/images/newCollection3.jpg" alt="">
-            </a>
-        </div>  
-    </div>
-</section> 
+    </section>
 
     <!-- Trending Products -->
-<section class="trending-section">
-    <h2>Trending Products</h2 data-aos="zoom-in-down">
-    <div class="products-container" id="products-container" data-aos="zoom-in-up">
-         <!-- Products will be added dynamically here -->
-    </div>
-</section> 
+    <section class="trending-section">
+        <h2>Trending Products</h2 data-aos="zoom-in-down">
+        <div class="products-container" id="products-container" data-aos="zoom-in-up">
+            <!-- Products will be added dynamically here -->
+        </div>
+    </section>
 
-<!-- Deals Section -->
-<!-- <section class="deals-section">
+    <!-- Deals Section -->
+    <!-- <section class="deals-section">
         <h2>Exclusive Deals</h2>
         <div class="slider-container">
             <div class="slider" id="slider">
@@ -416,21 +428,21 @@ include './jwelry-website/includes/header.php';
         </div>
 </section> -->
     <!-- Offer banner section -->
-<section class="offer-banner-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-    <div id="offer-banner" class="offer-banner" onclick="buyOfferProduct()">
-        <img id="offer-image" src="" alt="Special Offer">
+    <section class="offer-banner-section" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div id="offer-banner" class="offer-banner" onclick="buyOfferProduct()">
+            <img id="offer-image" src="" alt="Special Offer">
             <div class="offer-details">
-            <h2 id="offer-name"></h2>
-            <p id="offer-price"></p>
-            <a href="./jwelry-website/pages/checkout.php?product_id=1">
-                <p class="offer-text">Limited Time Offer! Click to Buy Now</p>
-            </a>
+                <h2 id="offer-name"></h2>
+                <p id="offer-price"></p>
+                <a href="./jwelry-website/pages/checkout.php?product_id=1">
+                    <p class="offer-text">Limited Time Offer! Click to Buy Now</p>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Our costomer section -->
-<section class="our-customers">
+    <section class="our-customers">
         <div class="container mx-auto px-6">
             <h2>Our Happy Customers</h2>
             <p>Join our satisfied customers who trust us for their silver jewelry needs.</p>
@@ -458,12 +470,12 @@ include './jwelry-website/includes/header.php';
                     <p>"Best customer service and stunning designs. Highly recommended!"</p>
                     <h4>- Gautam Adani</h4>
                 </div>
+            </div>
         </div>
-    </div>
-</section> 
+    </section>
 
     <!-- Store center section -->
-<section id="our-store" class="store-section">
+    <section id="our-store" class="store-section">
         <h2>Our Store</h2>
         <p>Welcome to our premium silver jewelry store! Explore our collection of exquisite designs crafted with
             perfection.</p>
@@ -482,14 +494,14 @@ include './jwelry-website/includes/header.php';
                 referrerpolicy="no-referrer-when-downgrade" width="100%" height="200" style="border:0;"
                 allowfullscreen="" loading="lazy"></iframe>
         </div>
-</section> 
+    </section>
 
-<section>
-<h1>Meet the Team</h1>
-<div class="team-container" id="team" data-aos="flip-left"></div>
-</section>
+    <section>
+        <h1>Meet the Team</h1>
+        <div class="team-container" id="team" data-aos="flip-left"></div>
+    </section>
     <!-- FAQs section -->
-<div class="faq-container">
+    <div class="faq-container">
         <h2>Frequently Asked Questions (FAQs)</h2>
         <div class="faq-item" data-aos="zoom-in-down">
             <p class="faq-question">1. What type of silver jewelry do you offer? <span class="faq-toggle">&#9662;</span>
@@ -521,7 +533,7 @@ include './jwelry-website/includes/header.php';
             <p class="faq-answer">You can refer to our size guide available on the product page or visit a local jeweler
                 for precise measurements. If you need further assistance, feel free to contact us.</p>
         </div>
-</div>
+    </div>
 
     <?php
 include './jwelry-website/includes/footer.php';
@@ -552,54 +564,51 @@ include './jwelry-website/includes/footer.php';
 
 </script>
 <!-- Add SwiperJS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- For category slider -->
 <script>
-  var swiper = new Swiper(".swiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
+    var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+    });
 
 
-  <!-- For team -->
-const teamMembers = [
-    { name: "Rohit Baghel", role: "CEO", image: "./jwelry-website/assets/images/team1.jpg" },
-    { name: "Rohit Baghel", role: "CTO", image: "./jwelry-website/assets/images/team1.jpg" },
-    { name: "Rohit Baghel", role: "Designer", image: "./jwelry-website/assets/images/team1.jpg" }
-];
+    <!-- For team -->
+    const teamMembers = [
+        { name: "Rohit Baghel", role: "CEO", image: "./jwelry-website/assets/images/team1.jpg" },
+        { name: "Rohit Baghel", role: "CTO", image: "./jwelry-website/assets/images/team1.jpg" },
+        { name: "Rohit Baghel", role: "Designer", image: "./jwelry-website/assets/images/team1.jpg" }
+    ];
 
-const teamContainer = document.getElementById("team");
+    const teamContainer = document.getElementById("team");
 
-teamMembers.forEach(member => {
-    const memberDiv = document.createElement("div");
-    memberDiv.classList.add("team-member");
-    memberDiv.innerHTML = `
+    teamMembers.forEach(member => {
+        const memberDiv = document.createElement("div");
+        memberDiv.classList.add("team-member");
+        memberDiv.innerHTML = `
         <img src="${member.image}" alt="${member.name}">
         <h3>${member.name}</h3>
         <p>${member.role}</p>
     `;
-    teamContainer.appendChild(memberDiv);
-});
+        teamContainer.appendChild(memberDiv);
+    });
 </script>
 
 
