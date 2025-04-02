@@ -58,6 +58,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/jweleryWebsite/jwelry-website/
         justify-content: space-between;
         position: relative;
         z-index: 999;
+        background-color:rgba(73, 71, 71, 0.54);
     }
 
     .login_btn {
